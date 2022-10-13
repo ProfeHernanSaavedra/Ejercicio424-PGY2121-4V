@@ -30,6 +30,12 @@ public class Oferta extends Producto{
         return super.toString()+ " Oferta{" + "descuento=" + descuento + '}';
     }
     
-    
+    public int aPagar(int cantidad)
+    {
+        int total = this.getPrecio() * cantidad;
+        int totalDesc = total * this.getDescuento()/100;
+        
+        return totalDesc;
+    }
     
 }
